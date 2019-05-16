@@ -6,11 +6,29 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    cur = conn.cursor()
-    cur.execute("SELECT * FROM productos")
-    productos = cur.fetchall()
-    print(productos)
-    return render_template('index.html',data = productos)
+    return render_template('index.html')
+# @app.route('/proteinas')
+# def proteinas():
+#     cur = conn.cursor()
+#     cur.execute("SELECT * FROM productos")
+#     productos = cur.fetchall()
+#     print(productos)
+#     return render_template('index.html',data = productos)
+# @app.route('/quemadores')
+# def quemadores():
+#     cur = conn.cursor()
+#     cur.execute("SELECT * FROM productos")
+#     productos = cur.fetchall()
+#     print(productos)
+#     return render_template('index.html',data = productos)
+# @app.route('/preentrenos')
+
+# def preentrenos():
+#     cur = conn.cursor()
+#     cur.execute("SELECT * FROM productos")
+#     productos = cur.fetchall()
+#     print(productos)
+#     return render_template('index.html',data = productos)
 
 @app.route('/add')
 def add():
